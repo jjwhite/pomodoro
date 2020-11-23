@@ -1,0 +1,31 @@
+
+.poms {width:600px; margin:20px auto; color:white;}
+.pomodoro-task {display:flex; margin:15px auto;}
+.task-row {margin-left:auto;}
+
+.square {
+    background: #222;
+    border: 1px solid #999;
+    font-weight: bold;
+    height: 25px;
+    margin-right: 5px;
+    padding: 0;
+    text-align: center;
+    width: 25px;
+    cursor:pointer;
+    color:white;
+  }
+
+  .pomodoro-task{
+    cursor:pointer;
+  }
+
+  .done{
+    text-decoration: line-through
+  }
+  
+  .kbd-navigation .square:focus {
+    background: #ddd;
+  }
+
+  textarea {width:100%; margin-top:50px; height:150px; background-color:#222; color:#fff; padding:10px;}

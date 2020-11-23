@@ -1,12 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+import Timer from './Timer';
+import Pomodoro from './Pomodoro';
+import Task from './Task';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Timer min={25} sec={0}  />
+    <Pomodoro  /> 
+    {/* <Task taskDescription={"Test Task"} estimatedPoms={3} /> */}
   </React.StrictMode>,
   document.getElementById('root')
 );
