@@ -32,6 +32,23 @@ h1 {color:white; text-align:center; margin-bottom:50px;}
 .btn-stop:hover{ background-color:red; color:white;}
 .btn-reset:hover {background-color:white; color:black;}
 
+.pomodoro-new{width:600px;}
+#new-pom {
+  width: 70%;
+  margin-right: 10px;
+  background: transparent;
+  border: solid 1px white;
+  color: white;
+  padding: 5px;
+}
+
+select{
+  background-color: transparent;
+  border: solid 1px white;
+  padding: 4px;
+  color: white;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
