@@ -80,7 +80,7 @@ export default class Pomodoro extends Component {
 
 function Save(props){
     return(
-        <button className="btn btn-reset" onClick={props.onClick}>
+        <button className="btn btn-reset btn-save" onClick={props.onClick}>
             Save
         </button>
     )

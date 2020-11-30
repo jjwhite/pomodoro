@@ -31,6 +31,7 @@ h1 {color:white; text-align:center; margin-bottom:50px;}
 .btn-stop{border-color:red;color:red;}
 .btn-stop:hover{ background-color:red; color:white;}
 .btn-reset:hover {background-color:white; color:black;}
+.btn-save {float:right;}
 
 .pomodoro-new{width:600px;}
 #new-pom {
