@@ -36,15 +36,47 @@ export default class Pomodoro extends Component {
 
     save(){
         localStorage.setItem('pomodoro', JSON.stringify(this.state));
+        this.summarize();
+    }
+
+    summarize(){
+        let tasks = this.state.tasks.slice();
+        let summary = {
+            managerial : 0,
+            technical : 0,
+            administrative : 0,
+            other: 0
+        };
+
+        this.state.tasks.map((task, idx) => {
+            switch(task.category){
+                case "managerial":
+                    summary.managerial += (task.completed * 25);
+                    break;
+                case "technical":
+                    summary.technical += (task.completed * 25);
+                    break;
+                case "administrative":
+                    summary.administrative += (task.completed * 25);
+                    break;
+                case "other":
+                    summary.other += (task.completed * 25);
+                    break;
+            }    
+        });
+
+        localStorage.setItem('pomodoro-summary', JSON.stringify(summary));
     }
 
     addTask(){
         let newTask = document.getElementById("new-pom").value;
         let newEstimate = document.getElementById("new-estimate").value;
+        let newCategory = document.getElementById("new-category").value;
         let tasks = this.state.tasks.slice();
         tasks.push({
             description: newTask,
             estimate: Number(newEstimate),
+            category: newCategory,
             completed: 0,
             done: false
         });
@@ -100,7 +132,13 @@ function NewTask(props){
                 <option value="7">7</option>
                 <option value="8">8</option>
             </select>
-            <button className="btn btn-reset" onClick={props.onClick}>Add Task</button>
+            <select id="new-category">
+                <option value="technical">Technical</option>
+                <option value="administrative">Administrative</option>
+                <option value="managerial">Managerial</option>
+                <option value="other">Other</option>
+            </select>
+            <button className="btn btn-reset" onClick={props.onClick}>+</button>
         </div>
     )
 }

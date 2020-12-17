@@ -31,11 +31,12 @@ h1 {color:white; text-align:center; margin-bottom:50px;}
 .btn-stop{border-color:red;color:red;}
 .btn-stop:hover{ background-color:red; color:white;}
 .btn-reset:hover {background-color:white; color:black;}
-.btn-save {float:right;}
+.btn-save {float:right; }
+.btn-add {padding: 5px 5px;}
 
-.pomodoro-new{width:600px;}
+.pomodoro-new{width:750px;}
 #new-pom {
-  width: 70%;
+  width: 66%;
   margin-right: 10px;
   background: transparent;
   border: solid 1px white;
@@ -48,6 +49,7 @@ select{
   border: solid 1px white;
   padding: 4px;
   color: white;
+  margin-right:5px;
 }
 
 code {
